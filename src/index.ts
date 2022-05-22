@@ -5,10 +5,10 @@ import "./lib/environment";
 import { app } from "./lib/app";
 
 app.get("*", (req: Request, res: Response) => {
-  return res.send("yess");
+  return res.send("yes");
 });
 
 const server = http.createServer(app);
 server.listen(process.env.PORT, () => {
-  console.log("Listen at " + process.env.PORT);
+  console.log(`Listen at ${process.env.PORT}`);
 });
